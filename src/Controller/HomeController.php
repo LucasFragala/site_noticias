@@ -51,7 +51,7 @@ class HomeController extends AbstractController
             ['title' => 'Viagens', 'text' => 'Notícias sobre Viagens'],
         ];
 
-        $pageTitle = "Notícias a respeito de " .$slug;
+        $pageTitle = $slug;
         return $this->render('category.html.twig',[
             'categories' => $categories,
             'pageTitle' => $pageTitle,
