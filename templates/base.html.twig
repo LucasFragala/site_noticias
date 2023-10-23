@@ -38,18 +38,9 @@
 
         <div class="nav-scroller py-1 mb-2">
             <nav class="nav d-flex justify-content-between">
-                <a class="p-2 link-secondary" href="{{path('app_category')}}">World</a>
-                <a class="p-2 link-secondary" href="{{path('app_category')}}">U.S.</a>
-                <a class="p-2 link-secondary" href="{{path('app_category')}}">Technology</a>
-                <a class="p-2 link-secondary" href="{{path('app_category')}}">Design</a>
-                <a class="p-2 link-secondary" href="{{path('app_category')}}">Culture</a>
-                <a class="p-2 link-secondary" href="{{path('app_category')}}">Business</a>
-                <a class="p-2 link-secondary" href="{{path('app_category')}}">Politics</a>
-                <a class="p-2 link-secondary" href="{{path('app_category')}}">Opinion</a>
-                <a class="p-2 link-secondary" href="{{path('app_category')}}">Science</a>
-                <a class="p-2 link-secondary" href="{{path('app_category')}}">Health</a>
-                <a class="p-2 link-secondary" href="{{path('app_category')}}">Style</a>
-                <a class="p-2 link-secondary" href="{{path('app_category')}}">Travel</a>
+                {% for category in categories %}
+                    <a class="p-2 link-secondary" href="{{path('app_category',{'slug':category.title})}}">{{ category.title }}</a>
+                {% endfor %}
             </nav>
         </div>
     </div>
