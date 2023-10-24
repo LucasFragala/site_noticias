@@ -12,7 +12,7 @@ class NewsController extends AbstractController
     #[Route('api/news/{id}',name: 'api_new',methods: ['GET'])]
     public function getNew(int $id=null): Response
     {
-        // TODO - criar uma query real
+        // TODO - criar uma query real...
         $new = [
             "id" => $id,
             "título" => "Artista brasileiro é premiado em festival internacional de cinema",
